@@ -1,0 +1,10 @@
+# Ignore artifacts:
+build
+coverage
+ios
+android
+.expo
+**/.lock
+**/.png
+**/.jpg
+
