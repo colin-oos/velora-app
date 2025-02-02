@@ -22,7 +22,7 @@ export const useAnalyzeSession = (sessionId: string) => {
     dispatch(actions.addSuggestion({ sessionId, suggestion }))
   }
 
-  const sendMessage = (msg: string | ArrayBuffer) => {
+  const sendMessage = async (msg: string | ArrayBuffer) => {
     if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
       wsRef.current.send(msg)
     } else {
@@ -38,10 +38,10 @@ export const useAnalyzeSession = (sessionId: string) => {
   }
 
   const voiceProcessor = useVoiceProcessor({
-    onFrame: frame => {
-      sendMessage(frame)
+    onFrame: async frame => {
+      await sendMessage(frame)
     },
-  })
+  }, [sessionId])
 
   useEffect(() => {
     return () => {

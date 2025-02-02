@@ -23,7 +23,7 @@ const index = createSlice({
 
       state.sessions[sessionId] = {
         id: sessionId,
-        startTime: new Date(),
+        startTime: (new Date()).getTime(),
         endTime: null,
         transcript: {
           parts: [],
@@ -40,7 +40,7 @@ const index = createSlice({
       const { sessionId } = action.payload
       const session = state.sessions[sessionId]
       if (session) {
-        session.endTime = new Date()
+        session.endTime = (new Date()).getTime()
       }
 
       // Reset activeSession

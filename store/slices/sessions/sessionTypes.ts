@@ -46,8 +46,8 @@ export type Suggestion = {
 
 export type Session = {
   id: string
-  startTime: Date
-  endTime?: Date | null
+  startTime: number
+  endTime?: number | null
   transcript?: Transcript | null
   suggestions: Suggestion[]
 }

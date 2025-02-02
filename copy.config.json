@@ -1,0 +1,33 @@
+{
+  "exclude": [
+    "tests",
+    "**/*.md",
+    "README.*",
+    "node_modules/**",
+    "src/custom_vocabulary/**",
+    "nexus.ts",
+    "schema.graphql",
+    "src/speech/**",
+    "**/*.json",
+    "**/*.zip",
+    ".git/**",
+    "copilot/**",
+    "dist/**",
+    ".idea/**",
+    "**/.DS_Store",
+    "yarn.lock",
+    "ios/**",
+    "android/**",
+    ".expo/**",
+    "**/*.png",
+    "components/__tests__/**",
+    "**/*test.tsx",
+    "**/*.tff",
+    "assets/**",
+    "copy.config.json",
+    "copy.code.mjs",
+    "**/*.tar",
+    "**/*.tar.gz"
+  ],
+  "excludeHidden": true
+}

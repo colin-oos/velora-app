@@ -6,6 +6,7 @@ import sessionsReducer from './slices/sessions'
 const sessionsPersistConfig = {
   key: 'sessions',
   storage: AsyncStorage,
+  blacklist: ['activeSession']
 }
 
 const persistedSessionsReducer = persistReducer(sessionsPersistConfig, sessionsReducer)
