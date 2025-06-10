@@ -34,7 +34,14 @@ export const selectMostRecentSuggestion = (sessionId?: string) =>
       const { suggestions } = session
       if (!suggestions || suggestions.length === 0) return null
 
-      // Return the last element in the suggestions array
-      return suggestions[suggestions.length - 1]
+      // Return the suggestion with the most recent timestamp
+      return suggestions.reduce((mostRecent, suggestion) => {
+        const mostRecentTimestamp = mostRecent.endTime || mostRecent.startTime
+        const suggestionTimestamp = suggestion.endTime || suggestion.startTime
+        if ((!mostRecentTimestamp && suggestionTimestamp) || (suggestionTimestamp && mostRecentTimestamp && suggestionTimestamp > mostRecentTimestamp)) {
+          return suggestion
+        }
+        return mostRecent
+      })
     },
   )

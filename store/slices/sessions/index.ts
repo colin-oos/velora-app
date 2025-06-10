@@ -63,6 +63,7 @@ const index = createSlice({
         // Example logic for updating "final" text
         if (!transcriptPart.isPartial && session.transcript.text) {
           session.transcript.text.final += ' ' + transcriptPart.text
+          session.transcript.text.partial = null
         } else if (transcriptPart.isPartial && session.transcript.text) {
           session.transcript.text.partial = transcriptPart.text
         }

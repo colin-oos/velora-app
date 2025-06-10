@@ -9,12 +9,14 @@
       "distribution": "internal"
     },
     "preview": {
+      "node": "20.17.0",
       "distribution": "internal"
     },
     "production": {
       "autoIncrement": true
     },
     "development-simulator": {
+      "node": "20.17.0",
       "developmentClient": true,
       "distribution": "internal",
       "ios": {

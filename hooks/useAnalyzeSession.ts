@@ -4,6 +4,8 @@ import * as actions from '~/store/slices/sessions'
 import { useAppDispatch } from '~/store/hooks'
 import { useVoiceProcessor } from '~/hooks/useVoiceProcessor'
 
+const localUrl = 'ws://localhost:5000/analyze-sermon'
+
 const url = 'ws://bible--publi-qmw3xtn0apxb-90291305.us-east-2.elb.amazonaws.com/analyze-sermon'
 
 export const useAnalyzeSession = (sessionId: string) => {

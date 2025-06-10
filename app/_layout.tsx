@@ -11,11 +11,17 @@ export default function RootLayout() {
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <GestureHandlerRootView>
-          <Stack screenOptions={{ headerShown: false }}>
-            <Stack.Screen name={'(tabs)'} />
-          </Stack>
+          <RootNavigator />
         </GestureHandlerRootView>
       </PersistGate>
     </Provider>
+  )
+}
+
+function RootNavigator() {
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name={'(app)'} />
+    </Stack>
   )
 }
