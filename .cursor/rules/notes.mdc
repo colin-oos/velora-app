@@ -1,0 +1,7 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Do not try and run the project via `dev` or `build` command unless I explicitly ask you to.
+You may stage changes write conventional commit messages when prompted by the user, but NEVER actually commit code on your own. Only the user is allowed to commit code.
